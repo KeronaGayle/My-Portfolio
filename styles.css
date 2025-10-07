@@ -1,0 +1,213 @@
+/* ========== Root Variables ========== */
+:root {
+    --primary-color: #004080;
+    --secondary-color: #FAEBD7;
+    --accent-color: aqua;
+    --text-color: #333;
+    --light-bg: #eef2f7;
+}
+
+/* ========== General Page Styling ========== */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+/* ========== Header ========== */
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* ========== Navigation ========== */
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: yellow; /* extra hover effect */
+}
+
+/* ========== Content Area ========== */
+.content {
+    padding: 20px;
+}
+.section {
+    margin-bottom: 20px;
+    border: 2px solid var(--primary-color); /* border requirement */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* ========== Headings ========== */
+h1 {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+h2 {
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+    margin-top: 25px;
+    text-decoration: underline;
+}
+
+/* ========== Lists & Paragraphs ========== */
+ul {
+    margin: 10px 0 10px 25px;
+}
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* ========== Footer ========== */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+footer a {
+    color: #FAEBD7;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========== Images ========== */
+img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== Favorite Media Cards (Grid Layout) ========== */
+.favorite-media {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.favorite-media h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.favorite-media .media-cards {
+    display: grid; /* CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.favorite-media .card {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.favorite-media .card:hover {
+    transform: translateY(-5px);
+}
+
+.favorite-media .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.favorite-media .card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+.favorite-media .card p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Stack media cards vertically on smaller screens */
+    .favorite-media .media-cards {
+        grid-template-columns: 1fr;
+    }
+    /* Favorite Movies Table */
+section table {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse; /* ensures borders between cells are joined */
+    font-family: 'Arial', sans-serif;
+    border: 2px solid var(--primary-color); /* outer border of the table */
+}
+
+section th, section td {
+    border: 1px solid var(--primary-color); /* borders for each cell */
+    padding: 12px;
+    text-align: center;
+}
+
+section th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+section td {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+section tr:nth-child(even) td {
+    background-color: #f0e6d2; /* alternating row color for readability */
+}
+
+section tr:hover td {
+    background-color: #d0e0f0; /* optional hover effect for rows */
+}
+
+}
